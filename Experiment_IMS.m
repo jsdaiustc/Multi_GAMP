@@ -63,7 +63,7 @@ title('b)')
 set (gca,'position',[0.15,0.2,0.8,0.5],'FontSize',14,'FontName','Times New Rome' )
 
 figure(3);
-fw=1850;             %%%%%%%坐标横轴大小
+fw=1850;  
 %% GAMP
 f_sample=[50:2:1000];    
 [res_x,res_sample] =realMultichannel_GAMP(yy,f_sample,Fs,TT);
@@ -91,8 +91,8 @@ set (gca,'position',[0.52,0.65,0.35,0.15],'FontSize',10,'FontName','Times New Ro
 
 
 %% RV_ESPRIT
-range=[0,1000];      %%%%%%滤波范围 
-M=1000;               %%%%%%窗口大小
+range=[0,1000];    
+M=1000;     
 [hat_f,~,hat_s]=RV_ESPRIT(y_h,M,Fs,range);
 subplot(3,2,3);
 line([236.4 472.8 709.2;236.4 472.8 709.2],[0 0 0;1.5 1.5 1.5],'color','k','linestyle','--'); hold on;
